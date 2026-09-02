@@ -1,0 +1,45 @@
+{
+  "name": "genpark-autonomous-sla-breach-incident-escalator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Autonomous SLA breach incident escalator analyzing anomaly metrics, paging on-call responders, and executing canary rollback playbooks.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "site-reliability",
+  "tags": [
+    "incident-escalation",
+    "pagerduty-agent",
+    "sla-breach",
+    "automated-triage",
+    "runbook-automation"
+  ],
+  "inputs": {
+    "metric_name": {
+      "type": "string"
+    },
+    "current_metric_value": {
+      "type": "number"
+    },
+    "sla_threshold_value": {
+      "type": "number"
+    },
+    "service_name": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "incident_escalation_id": {
+      "type": "string"
+    },
+    "breach_severity_tier": {
+      "type": "string"
+    },
+    "automated_remediation_playbook_triggered": {
+      "type": "string"
+    },
+    "incident_war_room_portal_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
